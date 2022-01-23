@@ -16,7 +16,7 @@ const useStyles = makeStyles({
 
 interface WeatherDialogProps {     
     open: boolean
-    handleClose: MouseEventHandler<HTMLButtonElement>;
+    handleClose?: MouseEventHandler<HTMLButtonElement>;
     weather: IWeatherInfo | undefined
 }
   
@@ -36,7 +36,7 @@ const WeatherDialog: React.FC<WeatherDialogProps> = ({
                 <Typography sx={{ fontSize: 16 }} component="div">
                     Capital: {weather?.location.name}
                 </Typography>
-                <Typography sx={{ fontSize: 16 }} component="div">
+                <Typography data-testid={'temp'} sx={{ fontSize: 16 }} component="div">
                     Temperature: {weather?.current.temperature}
                 </Typography>
                 <Typography sx={{ fontSize: 16 }} component="div">

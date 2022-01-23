@@ -31,7 +31,7 @@ const CountryForm: React.FC = () => {
                 variant="contained"
                 color="primary"
                 disabled={!countryName}                                
-                data-testid="country-search-button"
+                data-testid="submit-button"
             >
                 Submit
             </Button>

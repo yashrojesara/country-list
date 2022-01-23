@@ -48,7 +48,7 @@ const CountryCard: React.FC<CountryCardProps> = ({
             <Card className={classes.card} key={index} sx={{ minWidth: 275 }}>
                 <CardContent key={index}>
                     <img height='150px' width='250px' src={country.flags.png} alt="flag"/>                           
-                    <Typography sx={{ fontSize: 16 }} component="div">
+                    <Typography data-testid={'Capital'} sx={{ fontSize: 16 }} component="div">
                         {country.name.common}
                     </Typography>
                     <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
@@ -63,7 +63,7 @@ const CountryCard: React.FC<CountryCardProps> = ({
                 </CardContent>
                 
                 <CardActions>
-                    <Button onClick={() => onWeatherCapitalClick(country.capital[0])} color='primary' variant="outlined" size="small">Get Weather Info</Button>
+                    <Button data-testid='button' onClick={() => onWeatherCapitalClick(country.capital[0])} color='primary' variant="outlined" size="small">Get Weather Info</Button>
                 </CardActions>
             </Card>
         </>        
